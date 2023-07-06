@@ -13,4 +13,7 @@ export class ServiceService {
   getPersons(){
     return this.http.get<Person[]>(this.Url);
   }
+  addPerson(person:Person){
+    return this.http.post<Person>(this.Url,person);
+  }
 }
