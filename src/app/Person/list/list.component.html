@@ -13,6 +13,7 @@
               <th>Name</th>
               <th>LastName</th>
               <th>Age</th>
+              <th>Accions</th>
             </tr>
           </thead>
           <tbody>
@@ -20,7 +21,10 @@
               <td>{{person.id}}</td>
               <td>{{person.name}}</td>
               <td>{{person.lastname}}</td> 
-              <td>{{person.age}}</td>  
+              <td>{{person.age}}</td> 
+              <td>
+                <button class="btn btn-info" (click)="Edit(person)">Update</button>
+              <!--<button class="btn btn-danger" (click)="Delete(person.id)">Delete</button> -->  
             </tr>
         </table>
       </div>

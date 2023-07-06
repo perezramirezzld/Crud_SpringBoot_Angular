@@ -16,4 +16,10 @@ export class ServiceService {
   addPerson(person:Person){
     return this.http.post<Person>(this.Url,person);
   }
+  getPersonId(id:number){
+    return this.http.get<Person>(this.Url+"/"+id);
+  }
+  UpdPerson(person:Person){
+    return this.http.put<Person>(this.Url+"/"+person.id,person);
+  }
 }

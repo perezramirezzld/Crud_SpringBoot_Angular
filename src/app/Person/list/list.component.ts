@@ -22,4 +22,9 @@ export class ListComponent  implements OnInit{
       this.persons=data;
     })
   }
+  Edit(person:Person):void{
+    localStorage.setItem("id",person.id.toString());
+    this.router.navigate(["edit"]);
+  }
+  Delete(peson:Person){}
 }

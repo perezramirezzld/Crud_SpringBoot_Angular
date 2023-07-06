@@ -17,6 +17,6 @@ export class AppComponent {
     this.router.navigate(["add"]);
   }
     Edit(){
-      this.router.navigate(["Edit"]);
+      this.router.navigate(["edit"]);
     }
 }
