@@ -26,5 +26,12 @@ export class ListComponent  implements OnInit{
     localStorage.setItem("id",person.id.toString());
     this.router.navigate(["edit"]);
   }
-  Delete(peson:Person){}
+
+  Delete(peson:Person){
+    this.service.deletePerson(peson)
+    .subscribe(data=>{
+      this.persons=this.persons.filter(p => p !== peson);
+      alert("Se elimino con exito a " + peson.name);
+    })
+  }
 }

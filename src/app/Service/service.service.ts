@@ -22,4 +22,7 @@ export class ServiceService {
   UpdPerson(person:Person){
     return this.http.put<Person>(this.Url+"/"+person.id,person);
   }
+  deletePerson(person:Person){
+    return this.http.delete<Person>(this.Url+"/"+person.id);
+  }
 }
